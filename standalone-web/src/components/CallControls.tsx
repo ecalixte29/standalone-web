@@ -4,10 +4,10 @@ import {
   PhoneIcon,
   PhoneXMarkIcon,
   MicrophoneIcon,
-  MicrophoneSlashIcon,
   PauseCircleIcon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/solid';
+import { SpeakerXMarkIcon } from '@heroicons/react/24/outline';
 
 function CallControls() {
   const [inCall, setInCall] = useState(false);
@@ -42,7 +42,7 @@ function CallControls() {
           disabled={!inCall}
           onClick={() => setMuted((m: boolean) => !m)}
         >
-          {muted ? <MicrophoneSlashIcon width={20} /> : <MicrophoneIcon width={20} />}
+          {muted ? <SpeakerXMarkIcon width={20} /> : <MicrophoneIcon width={20} />}
         </ActionIcon>
       </Tooltip>
 
